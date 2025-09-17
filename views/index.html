@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page moderna - Objetivos cumplidos en Cloud Computing">
+    <title>✅ Objetivo Cumplido - Cloud Computing</title>
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1 class="main-title">
+                    <span class="checkmark">✅</span>
+                    Se cumplió el objetivo de la clase de Cloud
+                </h1>
+                <p class="hero-subtitle">
+                    Proyecto académico demostrando conocimientos en Platform as a Service (PaaS)
+                </p>
+            </div>
+        </header>
+
+        <!-- PaaS Content Section -->
+        <main class="content-section">
+            <div class="paas-explanation">
+                <h2 class="section-title">¿Qué es PaaS (Platform as a Service)?</h2>
+                
+                <div class="paas-definition">
+                    <p class="definition-text">
+                        <strong>PaaS</strong> es un modelo de cloud computing donde el proveedor gestiona 
+                        completamente la infraestructura y el runtime, permitiendo que los desarrolladores 
+                        se enfoquen únicamente en subir y ejecutar su código.
+                    </p>
+                </div>
+
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h3>vs IaaS</h3>
+                        <p>Con PaaS no necesitas manejar el sistema operativo ni el runtime. 
+                        Todo está preconfigurado y listo para usar.</p>
+                    </div>
+                    
+                    <div class="comparison-card">
+                        <h3>vs SaaS</h3>
+                        <p>A diferencia de SaaS, con PaaS mantienes control total sobre 
+                        tu código y configuraciones de aplicación.</p>
+                    </div>
+                </div>
+
+                <div class="advantages-section">
+                    <h3 class="advantages-title">Ventajas principales de PaaS</h3>
+                    <div class="advantages-grid">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">🚀</div>
+                            <h4>Acelera el desarrollo</h4>
+                            <p>Deploy inmediato sin configuración de infraestructura</p>
+                        </div>
+                        
+                        <div class="advantage-item">
+                            <div class="advantage-icon">⚙️</div>
+                            <h4>Reduce tareas operativas</h4>
+                            <p>No más gestión de servidores, actualizaciones o parches</p>
+                        </div>
+                        
+                        <div class="advantage-item">
+                            <div class="advantage-icon">📈</div>
+                            <h4>Escalabilidad fácil</h4>
+                            <p>Escala automáticamente según la demanda de tu aplicación</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="risk-section">
+                    <h3 class="risk-title">⚠️ Riesgo principal</h3>
+                    <p class="risk-text">
+                        <strong>Vendor Lock-in:</strong> La dependencia del proveedor puede dificultar 
+                        la migración a otras plataformas en el futuro.
+                    </p>
+                </div>
+
+                <!-- Sección de datos en tiempo real -->
+                <div class="data-section">
+                    <h3 class="data-title">📊 Datos de Consumo de Canal y Caches</h3>
+                    <div id="data-loading" class="loading-indicator">
+                        <div class="spinner"></div>
+                        <p>Cargando datos en tiempo real...</p>
+                    </div>
+                    <div id="data-content" class="data-content" style="display: none;">
+                        <div class="data-summary">
+                            <div class="summary-card">
+                                <h4>Total de Filas</h4>
+                                <span id="total-rows">-</span>
+                            </div>
+                            <div class="summary-card">
+                                <h4>Última Actualización</h4>
+                                <span id="last-update">-</span>
+                            </div>
+                        </div>
+                        <div class="data-table-container">
+                            <table id="data-table" class="data-table">
+                                <thead>
+                                    <tr id="table-headers"></tr>
+                                </thead>
+                                <tbody id="table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="data-error" class="error-message" style="display: none;">
+                        <p>❌ Error al cargar los datos. Por favor, intenta de nuevo.</p>
+                        <button onclick="loadData()" class="retry-button">🔄 Reintentar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <a href="#" class="github-button" onclick="showGitHubInfo()">
+                <span class="github-icon">📂</span>
+                Ver Proyecto en GitHub
+            </a>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">
+                <strong>GoGo</strong> • Proyecto académico – Clase de Cloud
+            </p>
+            <p class="footer-date">
+                © 2024 • Desarrollado con Node.js + Express
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple interaction for GitHub button
+        function showGitHubInfo() {
+            alert('🎯 ¡Proyecto listo para subir a GitHub!\n\nPasos siguientes:\n1. git init\n2. git add .\n3. git commit -m "feat: inicializar proyecto con landing page Cloud"\n4. git remote add origin <URL_REPO>\n5. git push -u origin main');
+        }
+
+        // Función para cargar datos de la API
+        async function loadData() {
+            const loadingEl = document.getElementById('data-loading');
+            const contentEl = document.getElementById('data-content');
+            const errorEl = document.getElementById('data-error');
+            
+            try {
+                // Mostrar loading
+                loadingEl.style.display = 'block';
+                contentEl.style.display = 'none';
+                errorEl.style.display = 'none';
+                
+                const response = await fetch('/api/data');
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayData(result.data, result.totalRows, result.timestamp);
+                    loadingEl.style.display = 'none';
+                    contentEl.style.display = 'block';
+                } else {
+                    throw new Error(result.message || 'Error desconocido');
+                }
+            } catch (error) {
+                console.error('Error loading data:', error);
+                loadingEl.style.display = 'none';
+                errorEl.style.display = 'block';
+            }
+        }
+
+        // Función para mostrar los datos en la tabla
+        function displayData(data, totalRows, timestamp) {
+            const totalRowsEl = document.getElementById('total-rows');
+            const lastUpdateEl = document.getElementById('last-update');
+            const tableHeadersEl = document.getElementById('table-headers');
+            const tableBodyEl = document.getElementById('table-body');
+            
+            // Actualizar resumen
+            totalRowsEl.textContent = totalRows;
+            lastUpdateEl.textContent = new Date(timestamp).toLocaleString('es-ES');
+            
+            if (data.length === 0) {
+                tableBodyEl.innerHTML = '<tr><td colspan="100%">No hay datos disponibles</td></tr>';
+                return;
+            }
+            
+            // Obtener headers de la primera fila
+            const headers = Object.keys(data[0]);
+            
+            // Crear headers de la tabla
+            tableHeadersEl.innerHTML = headers.map(header => 
+                `<th>${header}</th>`
+            ).join('');
+            
+            // Crear filas de datos (mostrar solo las primeras 20 para rendimiento)
+            const displayData = data.slice(0, 20);
+            tableBodyEl.innerHTML = displayData.map(row => 
+                `<tr>${headers.map(header => 
+                    `<td>${row[header] || '-'}</td>`
+                ).join('')}</tr>`
+            ).join('');
+            
+            // Si hay más de 20 filas, mostrar mensaje
+            if (data.length > 20) {
+                const moreRowsEl = document.createElement('tr');
+                moreRowsEl.innerHTML = `<td colspan="${headers.length}" style="text-align: center; font-style: italic; color: rgba(255,255,255,0.7);">... y ${data.length - 20} filas más</td>`;
+                tableBodyEl.appendChild(moreRowsEl);
+            }
+        }
+
+        // Add smooth scroll behavior
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation on load
+            document.body.classList.add('loaded');
+            
+            // Cargar datos automáticamente
+            loadData();
+            
+            // Log success message
+            console.log('🎉 Landing Page cargada exitosamente!');
+            console.log('📚 Contenido PaaS desplegado correctamente');
+        });
+    </script>
+</body>
+</html>
