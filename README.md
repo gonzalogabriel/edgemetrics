@@ -1,6 +1,6 @@
 # 📊 EdgeMetrics - Cloud Computing Landing Page
 
-**EdgeMetrics** es una landing page moderna desarrollada con **Node.js** y **Express** para demostrar los objetivos cumplidos en la clase de Cloud Computing, específicamente sobre **Platform as a Service (PaaS)**. **Optimizada para Azure App Service** con integración de datos en tiempo real desde Google Sheets para monitoreo de métricas de canal y caches.
+**EdgeMetrics** es una landing page moderna desarrollada con **Node.js** y **Express** para demostrar los objetivos cumplidos en la clase de Cloud Computing, específicamente sobre **Platform as a Service (PaaS)**. **Optimizada para Azure App Service** con integración de datos en tiempo real para monitoreo de métricas.
 
 ## ✨ Características
 
@@ -27,7 +27,7 @@ Perfecta para demostrar conocimientos en Cloud Computing mientras se monitorean 
 
 - **Backend**: Node.js + Express
 - **Frontend**: HTML5 + CSS3 + JavaScript Vanilla
-- **Base de Datos**: Google Sheets API (CSV)
+- **Base de Datos**: API externa (CSV)
 - **Estilos**: CSS Grid, Flexbox, Gradientes
 - **Fuentes**: Google Fonts (Inter)
 - **Iconos**: Emojis nativos
@@ -172,11 +172,10 @@ landing-page-cloud-computing/
 
 ## 📊 Integración de Datos
 
-La aplicación consume datos en tiempo real desde Google Sheets:
-- **Fuente**: [Reporte de Consumo de Canal y Caches](https://docs.google.com/spreadsheets/d/1nIs97X-ozSiwWUPcJyFGnnnt2KGfyNAStZzr-gY9nCY/edit?usp=sharing)
-- **Formato**: CSV exportado automáticamente
+La aplicación incluye funcionalidad para mostrar datos en tiempo real:
+- **Visualización**: Tabla responsive con métricas
 - **Actualización**: En tiempo real al cargar la página
-- **Visualización**: Tabla responsive con resumen de datos
+- **API**: Endpoint `/api/data` para consumo de datos
 
 ## 🔧 Scripts Disponibles
 
@@ -195,11 +194,8 @@ Los colores principales se pueden modificar en `public/styles.css`:
 ### Contenido
 El contenido se puede modificar directamente en `views/index.html`.
 
-### Fuente de datos
-Para cambiar la fuente de datos, modifica la URL en `index.js` línea 36:
-```javascript
-const sheetUrl = 'https://docs.google.com/spreadsheets/d/TU_SHEET_ID/export?format=csv&gid=0';
-```
+### Configuración de datos
+Para personalizar la fuente de datos, modifica la configuración en `index.js`.
 
 ## 🤝 Contribuciones
 
@@ -243,7 +239,7 @@ git push -u origin main
 - [Documentación de Express.js](https://expressjs.com/)
 - [Guía de Node.js](https://nodejs.org/docs/)
 - [Azure App Service Documentation](https://docs.microsoft.com/en-us/azure/app-service/)
-- [Google Sheets API](https://developers.google.com/sheets/api)
+- [API Integration Best Practices](https://docs.microsoft.com/en-us/azure/architecture/best-practices/api-design)
 - [CSS Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Cloud Computing Concepts](https://aws.amazon.com/what-is-cloud-computing/)
 
