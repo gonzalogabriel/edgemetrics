@@ -249,5 +249,7 @@ git push -u origin main
 
 ---
 
-*Desarrollado con ❤️ para demostrar conocimientos en Cloud Computing y Azure*# edgemetrics
+*Desarrollado con ❤️ para demostrar conocimientos en Cloud Computing y Azure*
+
+<!-- Trigger deployment --># edgemetrics
 # edgemetrics
