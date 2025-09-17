@@ -1,6 +1,6 @@
-# 🚀 Cloud Computing Landing Page - Azure Ready
+# 📊 EdgeMetrics - Cloud Computing Landing Page
 
-Landing page moderna desarrollada con **Node.js** y **Express** para demostrar los objetivos cumplidos en la clase de Cloud Computing, específicamente sobre **Platform as a Service (PaaS)**. **Optimizada para Azure App Service** con integración de datos en tiempo real.
+**EdgeMetrics** es una landing page moderna desarrollada con **Node.js** y **Express** para demostrar los objetivos cumplidos en la clase de Cloud Computing, específicamente sobre **Platform as a Service (PaaS)**. **Optimizada para Azure App Service** con integración de datos en tiempo real desde Google Sheets para monitoreo de métricas de canal y caches.
 
 ## ✨ Características
 
@@ -11,6 +11,17 @@ Landing page moderna desarrollada con **Node.js** y **Express** para demostrar l
 - 📊 **Datos en tiempo real** desde Google Sheets
 - 🔧 **Optimizada para Azure** App Service
 - ♿ **Accesible** con soporte para lectores de pantalla
+- 📈 **Monitoreo de métricas** de canal y caches en tiempo real
+
+## 🎯 ¿Qué es EdgeMetrics?
+
+**EdgeMetrics** es una aplicación web que combina:
+- **Educación en Cloud Computing**: Explicación completa de PaaS
+- **Monitoreo en tiempo real**: Datos de consumo de canal y caches
+- **Visualización moderna**: Tabla responsive con métricas actualizadas
+- **Despliegue en la nube**: Optimizada para Azure App Service
+
+Perfecta para demostrar conocimientos en Cloud Computing mientras se monitorean métricas reales de infraestructura.
 
 ## 🛠️ Tecnologías Utilizadas
 
@@ -238,4 +249,5 @@ git push -u origin main
 
 ---
 
-*Desarrollado con ❤️ para demostrar conocimientos en Cloud Computing y Azure*
+*Desarrollado con ❤️ para demostrar conocimientos en Cloud Computing y Azure*# edgemetrics
+# edgemetrics
