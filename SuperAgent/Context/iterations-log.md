@@ -232,3 +232,72 @@ curl http://localhost:3000/api/data
 - iterations-log.md: Registro de todas las acciones
 
 **Resultado**: Contexto actualizado con todos los cambios
+
+## Iteración #3
+**Hora de inicio**: 2025-11-13 15:05
+**Solicitud**: Arrancar el servidor del proyecto
+**Respuesta**: Iniciar servidor Express en modo producción
+
+### Acción 3.1
+**Hora**: 15:05:00
+**Descripción**: Iniciar servidor del proyecto
+**Comando ejecutado**:
+```bash
+npm start
+```
+**Verificación**: curl http://localhost:3000/health
+**Respuesta del servidor**:
+```json
+{
+  "status":"OK",
+  "message":"Cloud Computing Landing Page is running",
+  "timestamp":"2025-11-13T15:05:24.080Z"
+}
+```
+
+**Resultado**: ✅ Servidor funcionando correctamente en http://localhost:3000
+
+## Iteración #4
+**Hora de inicio**: 2025-11-13 15:10
+**Solicitud**: Cambiar el fondo a color gris
+**Respuesta**: Modificar el estilo del fondo del body de gradiente azul/morado a color gris sólido
+
+### Acción 4.1
+**Hora**: 15:10:00
+**Descripción**: Cambiar fondo de gradiente a color gris
+**Archivo modificado**: public/styles.css
+**Cambios realizados**:
+- Cambiado `background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)` 
+- Por `background: #6b7280` (gris medio)
+
+**Resultado**: ✅ Fondo cambiado a color gris (#6b7280)
+
+### Acción 4.2
+**Hora**: 15:12:00
+**Descripción**: Cambiar fondo del header hero-section a color gris
+**Archivo modificado**: public/styles.css
+**Cambios realizados**:
+- Cambiado `background: rgba(255, 255, 255, 0.05)` (fondo semitransparente blanco)
+- Por `background: #4b5563` (gris más oscuro para contraste)
+
+**Resultado**: ✅ Fondo del header hero-section cambiado a color gris (#4b5563)
+
+### Acción 4.3
+**Hora**: 15:14:00
+**Descripción**: Cambiar fondo de la sección paas-explanation a azul claro
+**Archivo modificado**: public/styles.css
+**Cambios realizados**:
+- Cambiado `background: rgba(255, 255, 255, 0.08)` (fondo semitransparente blanco)
+- Por `background: #93c5fd` (azul claro)
+
+**Resultado**: ✅ Fondo de la sección paas-explanation cambiado a azul claro (#93c5fd)
+
+### Acción 4.4
+**Hora**: 15:16:00
+**Descripción**: Cambiar título de la sección principal
+**Archivo modificado**: views/index.html
+**Cambios realizados**:
+- Cambiado título `<h2 class="section-title">¿Qué es PaaS (Platform as a Service)?</h2>`
+- Por `<h2 class="section-title">Hola colombia</h2>`
+
+**Resultado**: ✅ Título de la sección cambiado a "Hola colombia"

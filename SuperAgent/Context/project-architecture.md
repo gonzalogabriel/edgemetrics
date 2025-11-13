@@ -65,27 +65,30 @@ views/index.html
 - **Propósito**: Landing page principal con contenido educativo y datos en tiempo real
 - **Contenido**: 
   - Título: "✅ Se cumplió el objetivo de la clase de Cloud"
+  - Título de sección: "Hola colombia" (actualizado desde "¿Qué es PaaS (Platform as a Service)?")
   - Explicación completa de PaaS vs IaaS/SaaS
   - Ventajas: acelera desarrollo, reduce operaciones, escalabilidad
   - Riesgo: vendor lock-in
-  - **NUEVO**: Sección de datos de Google Sheets con tabla dinámica
+  - Sección de datos de Google Sheets con tabla dinámica
   - Footer académico con nombre "GoGo"
-- **Diseño**: Responsive, gradiente azul/morado, tipografía Inter
+- **Diseño**: Responsive, fondo gris, tipografía Inter
 - **Interactividad**: 
   - Botón GitHub con alert informativo
-  - **NUEVO**: Carga automática de datos de Google Sheets
-  - **NUEVO**: Tabla responsive con datos de consumo de canal y caches
+  - Carga automática de datos de Google Sheets
+  - Tabla responsive con datos de consumo de canal y caches
 
 ### public/styles.css ✅ COMPLETADO Y ACTUALIZADO
 - **Propósito**: Estilos modernos para la landing page con sección de datos
 - **Características**: 
-  - Gradiente azul/morado (#667eea → #764ba2)
+  - Fondo gris sólido (#6b7280) - actualizado desde gradiente azul/morado
+  - Hero section con fondo gris (#4b5563) - actualizado desde fondo semitransparente
+  - Sección paas-explanation con fondo azul claro (#93c5fd) - actualizado desde fondo semitransparente
   - Tipografía Inter desde Google Fonts
   - Responsive design (mobile-first)
   - Animaciones CSS (bounce para checkmark, spinner para loading)
   - Backdrop-filter effects
   - Accessibility support (prefers-reduced-motion, high-contrast)
-  - **NUEVO**: Estilos para tabla de datos, loading spinner, error states
+  - Estilos para tabla de datos, loading spinner, error states
 - **Layout**: CSS Grid y Flexbox
 
 ### README.md ✅ COMPLETADO
