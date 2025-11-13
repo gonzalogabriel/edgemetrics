@@ -1,6 +1,6 @@
 # 📊 EdgeMetrics - Cloud Computing Landing Page
 
-**EdgeMetrics** es una landing page moderna desarrollada con **Node.js** y **Express** para demostrar los objetivos cumplidos en la clase de Cloud Computing, específicamente sobre **Platform as a Service (PaaS)**. **Optimizada para Azure App Service** con integración de datos en tiempo real para monitoreo de métricas.
+**EdgeMetrics Colombia** es una landing page moderna desarrollada con **Node.js** y **Express** para demostrar los objetivos cumplidos en la clase de Cloud Computing, específicamente sobre **Platform as a Service (PaaS)**. **Optimizada para Azure App Service** con integración de datos en tiempo real para monitoreo de métricas.
 
 ## ✨ Características
 
